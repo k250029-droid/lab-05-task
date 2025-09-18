@@ -7,13 +7,13 @@ int main() {
     printf("Enter device type (1-Laptop, 2-Smartphone, 3-Router): ");
     scanf("%d", &deviceType);
 
-    // First level: Validate device type
+   
     if (deviceType == 1 || deviceType == 2 || deviceType == 3) {
         printf("Enter symptom code: ");
         scanf("%d", &symptomCode);
 
-        // Second level: Nested switch based on device type
-        if (deviceType == 1) { // Laptop
+        
+        if (deviceType == 1) { 
             switch (symptomCode) {
                 case 10:
                     printf("**CRITICAL ISSUE** -> Immediate hardware service required!\n");
@@ -32,7 +32,7 @@ int main() {
                     printf("Invalid symptom code for Laptop.\n");
             }
         }
-        else if (deviceType == 2) { // Smartphone
+        else if (deviceType == 2) { 
             switch (symptomCode) {
                 case 20:
                     printf("Advice: Run battery calibration tool and check for background apps.\n");
@@ -50,7 +50,7 @@ int main() {
                     printf("Invalid symptom code for Smartphone.\n");
             }
         }
-        else if (deviceType == 3) { // Router
+        else if (deviceType == 3) { 
             switch (symptomCode) {
                 case 30:
                     printf("Advice: Check ISP status and router cables.\n");
@@ -71,9 +71,10 @@ int main() {
             }
         }
     } else {
-        printf("Invalid device type entered.\n");
+        printf("Invalid device type.\n");
     }
 
     return 0;
 }
+
 
